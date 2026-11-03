@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eee8dc">
+  <meta name="description" content="VYBE — descubra como a publicidade e as redes sociais influenciam nossas escolhas de consumo.">
+  <title>VYBE — Moda, publicidade e consumo consciente</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#inicio" aria-label="VYBE início">VYBE<span>.</span></a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a href="#experiencia">Experiência</a>
+      <a href="#influencia">Por trás da compra</a>
+      <a href="#consciente">Consumo consciente</a>
+    </nav>
+    <a class="header-cta" href="#experiencia">Explorar <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> MODA • PUBLICIDADE • COMPORTAMENTO</p>
+        <h1>Você escolhe.<br><em>Mas quem influencia</em><br>essa escolha?</h1>
+        <p class="hero-description">Uma experiência para descobrir como tendências, influenciadores e estratégias digitais participam das nossas decisões de compra.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#experiencia">Entrar na experiência <span>↗</span></a>
+          <a class="text-link" href="#sobre">Conheça o projeto <span>↓</span></a>
+        </div>
+        <div class="hero-note"><span class="note-dot"></span> UM OLHAR MAIS CONSCIENTE SOBRE O CONSUMO DIGITAL</div>
+      </div>
+      <div class="hero-art" aria-label="Composição editorial de moda">
+        <div class="hero-image hero-image-main"></div>
+        <div class="hero-image hero-image-detail"></div>
+        <div class="hero-stamp"><span>THINK</span><strong>BEYOND<br>THE HYPE</strong><span>VYBE / 2026</span></div>
+        <div class="hero-index">01 — 04</div>
+      </div>
+      <div class="hero-bottom"><span>DESLIZE PARA DESCOBRIR</span><span class="scroll-line"></span><span>01 / INTRODUÇÃO</span></div>
+    </section>
+
+    <section class="intro-section section-wrap" id="sobre">
+      <div class="section-kicker">01 / O PROJETO</div>
+      <div class="intro-content">
+        <h2>Nem toda vontade<br>de comprar <em>vem de você.</em></h2>
+        <div class="intro-text">
+          <p>Nas redes sociais, somos expostos a tendências, recomendações e anúncios o tempo todo. Muitas vezes, uma compra parece uma decisão espontânea, mas pode ter sido estimulada por estratégias de publicidade.</p>
+          <p>O VYBE convida você a observar esses estímulos e refletir sobre a diferença entre querer, precisar e ser influenciado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experiencia">
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><div class="section-kicker">02 / SUA ESCOLHA</div><h2>Entre na vitrine.</h2></div>
+          <p>Quatro produtos. Quatro estratégias.<br>Qual deles chamaria sua atenção?</p>
+        </div>
+        <div class="product-grid">
+          <article class="product-card" data-product="camiseta">
+            <div class="product-image image-shirt"><span class="product-number">01</span><span class="product-tag">TRENDING</span></div>
+            <div class="product-info"><div><p class="product-category">ESSENCIAL / ALGODÃO</p><h3>Camiseta básica</h3></div><strong class="price">R$ 89,90</strong></div>
+            <p class="ad-copy">“Novo! Todo mundo está usando 🔥”</p>
+            <p class="strategy-label">ESTRATÉGIA: PROVA SOCIAL</p>
+            <button class="vote-button" data-vote="camiseta">Eu escolheria <span>↗</span></button>
+          </article>
+          <article class="product-card" data-product="tenis">
+            <div class="product-image image-sneaker"><span class="product-number">02</span><span class="product-tag">CREATOR'S PICK</span></div>
+            <div class="product-info"><div><p class="product-category">STREETWEAR / URBANO</p><h3>Tênis casual</h3></div><strong class="price">R$ 399,90</strong></div>
+            <p class="ad-copy">“Indicado pela sua influenciadora favorita.”</p>
+            <p class="strategy-label">ESTRATÉGIA: INFLUÊNCIA DIGITAL</p>
+            <button class="vote-button" data-vote="tenis">Eu escolheria <span>↗</span></button>
+          </article>
+          <article class="product-card" data-product="bolsa">
+            <div class="product-image image-bag"><span class="product-number">03</span><span class="product-tag">LIMITED</span></div>
+            <div class="product-info"><div><p class="product-category">ACESSÓRIO / DAILY</p><h3>Bolsa compacta</h3></div><strong class="price">R$ 159,90</strong></div>
+            <p class="ad-copy">“Atenção: últimas 3 unidades disponíveis!”</p>
+            <p class="strategy-label">ESTRATÉGIA: ESCASSEZ</p>
+            <button class="vote-button" data-vote="bolsa">Eu escolheria <span>↗</span></button>
+          </article>
+          <article class="product-card" data-product="bone">
+            <div class="product-image image-cap"><span class="product-number">04</span><span class="product-tag">TODAY ONLY</span></div>
+            <div class="product-info"><div><p class="product-category">SPORT / CASUAL</p><h3>Boné clássico</h3></div><strong class="price">R$ 79,90</strong></div>
+            <p class="ad-copy">“30% OFF somente hoje. Aproveite!”</p>
+            <p class="strategy-label">ESTRATÉGIA: URGÊNCIA E DESCONTO</p>
+            <button class="vote-button" data-vote="bone">Eu escolheria <span>↗</span></button>
+          </article>
+        </div>
+        <div class="vote-status" id="vote-status" role="status" aria-live="polite">Escolha o produto que mais despertou seu interesse.</div>
+        <div class="results-panel" id="results-panel" hidden>
+          <div class="results-top"><div><p class="section-kicker">RESULTADO DA VOTAÇÃO</p><h3>O que chamou mais atenção?</h3></div><span class="vote-total" id="vote-total">0 votos</span></div>
+          <div id="results-list" class="results-list"></div>
+          <p class="results-footnote" id="results-footnote">Os resultados aparecem aqui depois dos votos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="influence-section section-wrap" id="influencia">
+      <div class="section-kicker">03 / POR TRÁS DA COMPRA</div>
+      <div class="influence-heading"><h2>O desejo também<br>pode ser <em>construído.</em></h2><p>As marcas não apresentam apenas produtos. Elas criam contextos, despertam emoções e oferecem motivos para comprar.</p></div>
+      <div class="strategy-grid">
+        <article><span>01</span><h3>Prova social</h3><p>Quando vemos muitas pessoas usando algo, podemos sentir que aquele produto também deveria fazer parte da nossa vida.</p></article>
+        <article><span>02</span><h3>Influência digital</h3><p>A confiança e a identificação com criadores de conteúdo podem tornar uma recomendação mais convincente.</p></article>
+        <article><span>03</span><h3>Escassez</h3><p>A ideia de que há poucas unidades pode aumentar a sensação de que precisamos decidir rapidamente.</p></article>
+        <article><span>04</span><h3>Urgência</h3><p>Descontos com prazo limitado podem fazer a pessoa comprar antes de avaliar se realmente precisa.</p></article>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="video-copy"><div class="section-kicker">04 / INFORME-SE</div><h2>Antes de clicar<br>em “comprar”,<br><em>pense um pouco.</em></h2><p>Assista ao vídeo do projeto e conheça melhor o impacto da publicidade digital e dos influenciadores nas escolhas de consumo.</p><a class="button button-light" id="video-link" href="#" target="_blank" rel="noopener">Assistir ao vídeo <span>↗</span></a></div>
+      <div class="video-placeholder"><div class="play-icon">▶</div><span>VÍDEO DO PROJETO</span><small>O link será adicionado aqui.</small></div>
+    </section>
+
+    <section class="quiz-section section-wrap">
+      <div class="quiz-mark">V?</div><div class="quiz-copy"><div class="section-kicker">05 / TESTE SEU OLHAR</div><h2>Você reconhece<br>as estratégias?</h2><p>Responda ao quiz e descubra quanto você consegue identificar das técnicas usadas para influenciar o consumo.</p><a class="button button-dark" id="quiz-link" href="#" target="_blank" rel="noopener">Acessar o Kahoot <span>↗</span></a></div>
+    </section>
+
+    <section class="conscious-section" id="consciente">
+      <div class="section-wrap conscious-inner"><div class="section-kicker">06 / CONSUMO CONSCIENTE</div><h2>Seu estilo.<br>Suas escolhas.<br><em>Mais consciência.</em></h2><div class="conscious-bottom"><p>Antes de comprar, vale perguntar: eu realmente preciso disso? Estou escolhendo porque gosto ou porque fui pressionado por uma tendência? Pesquise, compare e dê a si mesmo tempo para decidir.</p><span>MENOS IMPULSO. MAIS INTENÇÃO.</span></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="wordmark" href="#inicio">VYBE<span>.</span></a><p>Moda, publicidade e consumo consciente.</p><a href="#inicio">VOLTAR AO TOPO ↑</a><small>PROJETO EDUCACIONAL • 2026</small></footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
