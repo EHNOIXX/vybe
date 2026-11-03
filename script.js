@@ -118,6 +118,26 @@ async function castVote(productId, button) {
   await loadVotes();
 }
 
+// Em modo de demonstração, permite apagar somente o voto deste navegador.
+const resetButton = document.createElement("button");
+resetButton.id = "reset-local-vote";
+resetButton.className = "reset-vote-button";
+resetButton.type = "button";
+resetButton.textContent = "Limpar voto de teste deste navegador";
+resetButton.hidden = supabaseReady;
+resultsPanel.appendChild(resetButton);
+resetButton.addEventListener("click", () => {
+  if (supabaseReady) return;
+  localStorage.removeItem("vybe-votes");
+  localStorage.removeItem("vybe-voted");
+  document.querySelectorAll(".vote-button").forEach(item => {
+    item.disabled = false;
+    item.classList.remove("selected");
+  });
+  statusEl.textContent = "Voto de teste removido. Você pode votar novamente.";
+  loadVotes();
+});
+
 document.querySelectorAll(".vote-button").forEach(button => {
   button.addEventListener("click", () => castVote(button.dataset.vote, button));
 });
