@@ -84,7 +84,19 @@ async function loadVotes() {
     statusEl.textContent = "Não foi possível carregar a votação compartilhada. Confira a configuração do Supabase.";
     return;
   }
-  renderResults(data || []);
+  const sharedVotes = data || [];
+
+  // Se a votação compartilhada foi zerada no Supabase, libera novamente
+  // os navegadores que tinham registrado um voto antes da limpeza.
+  if (sharedVotes.length === 0) {
+    localStorage.removeItem("vybe-supabase-voted");
+    document.querySelectorAll(".vote-button").forEach(button => {
+      button.disabled = false;
+      button.classList.remove("selected");
+    });
+  }
+
+  renderResults(sharedVotes);
 }
 
 async function castVote(productId, button) {
