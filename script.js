@@ -1,8 +1,8 @@
 // VYBE — configuração da votação
 // Para ativar a votação compartilhada, preencha os dois valores abaixo
 // com as credenciais públicas do projeto Supabase.
-const SUPABASE_URL = "";
-const SUPABASE_ANON_KEY = "";
+const SUPABASE_URL = "https://vshenaqmvuzhvbxnyxrm.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_UnsuZdsntNDwY7E3iDTwlw_UXnP81M8";
 
 const products = [
   { id: "camiseta", name: "Camiseta básica" },
@@ -88,7 +88,8 @@ async function loadVotes() {
 }
 
 async function castVote(productId, button) {
-  const alreadyVoted = localStorage.getItem("vybe-voted");
+  const voteStorageKey = db ? "vybe-supabase-voted" : "vybe-voted";
+  const alreadyVoted = localStorage.getItem(voteStorageKey);
   if (alreadyVoted) {
     statusEl.textContent = "Você já registrou sua escolha neste navegador. Obrigado por participar!";
     return;
@@ -109,7 +110,7 @@ async function castVote(productId, button) {
     saveLocalVote(productId);
   }
 
-  localStorage.setItem("vybe-voted", "true");
+  localStorage.setItem(voteStorageKey, "true");
   document.querySelectorAll(".vote-button").forEach(item => {
     item.classList.toggle("selected", item.dataset.vote === productId);
     item.disabled = true;
