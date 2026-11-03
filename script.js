@@ -168,7 +168,7 @@ mainNav.querySelectorAll("a").forEach(link => link.addEventListener("click", () 
 
 // Links do vídeo e do Kahoot: substitua pelos endereços finais do projeto.
 const VIDEO_URL = "";
-const KAHOOT_URL = "";
+const KAHOOT_URL = "https://create.kahoot.it/share/consumo-online-e-influencia-das-redes/20a97fc3-de8b-43cf-86a2-8175e25db049";
 if (VIDEO_URL) document.querySelector("#video-link").href = VIDEO_URL;
 if (KAHOOT_URL) document.querySelector("#quiz-link").href = KAHOOT_URL;
 
