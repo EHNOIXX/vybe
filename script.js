@@ -42,7 +42,7 @@ function summarize(votes) {
   }));
 }
 
-function renderResults(votes) {
+function renderResults(votes, unavailable = false) {
   const summary = summarize(votes);
   const total = votes.length;
   totalEl.textContent = `${total} ${total === 1 ? "voto" : "votos"}`;
@@ -62,15 +62,17 @@ function renderResults(votes) {
     track.appendChild(fill);
     const count = document.createElement("span");
     count.className = "result-count";
-    count.textContent = `${percentage}%`;
+    count.textContent = unavailable ? "—" : `${percentage}%`;
     row.append(name, track, count);
     resultsList.appendChild(row);
   });
 
   resultsPanel.hidden = false;
-  footnoteEl.textContent = supabaseReady
-    ? "Resultados agregados dos participantes que votaram neste projeto."
-    : "Modo demonstração: estes votos ficam salvos apenas neste navegador. Configure o Supabase para compartilhar entre celulares.";
+  footnoteEl.textContent = unavailable
+    ? "Não foi possível consultar os votos agora. Os percentuais serão atualizados quando a conexão for restabelecida."
+    : supabaseReady
+      ? "Resultados agregados dos participantes que votaram neste projeto."
+      : "Modo demonstração: estes votos ficam salvos apenas neste navegador. Configure o Supabase para compartilhar entre celulares.";
 }
 
 async function loadVotes() {
@@ -81,7 +83,8 @@ async function loadVotes() {
   const { data, error } = await db.from("votes").select("product_id");
   if (error) {
     console.error("Não foi possível carregar os votos:", error.message);
-    statusEl.textContent = "Não foi possível carregar a votação compartilhada. Confira a configuração do Supabase.";
+    statusEl.textContent = "Não foi possível carregar a votação compartilhada. Confira a conexão com o Supabase.";
+    renderResults([], true);
     return;
   }
   const sharedVotes = data || [];
