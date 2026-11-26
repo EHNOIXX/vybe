@@ -39,3 +39,7 @@
 /* Ajuste fino: sobe um pouco o player do vídeo na seção */
 .video-frame{transform:translateY(-18px)}
 @media(max-width:650px){.video-frame{transform:translateY(-12px)}}
+
+/* Ajuste fino: eleva um pouco a prévia do vídeo na seção */
+.video-frame{transform:translateY(-10px)}
+@media(max-width:650px){.video-frame{transform:translateY(-6px)}}
